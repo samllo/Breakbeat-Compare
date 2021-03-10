@@ -20,6 +20,14 @@ body{ background-color: #dfdfdf;
     .left {
       left: 0;
       text-align: right;
+      animation-name: lefth1;
+      animation-duration: 2s;
+      animation-delay: 0.4s;
+    }
+    
+    @keyframes lefth1 {
+      0%   {left:500px; top:0px;}
+      100% {left:0px; top:0px;}
     }
     
     /* Control the right side */
@@ -27,6 +35,14 @@ body{ background-color: #dfdfdf;
       right: 0;
       text-align: left;
       margin-top: 6vw;
+      animation-name: righth1;
+      animation-duration: 2s;
+      animation-delay: 0.4s;
+    }
+    
+    @keyframes righth1 {
+      0%   {right:500px; top:0px;}
+      100% {right:0px; top:0px;}
     }
     
 #container{
