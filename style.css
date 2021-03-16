@@ -1,127 +1,176 @@
-body{ background-color: #dfdfdf;
-    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23f3f700' fill-opacity='0.44'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    max-width: 100%;
-    overflow-x: hidden;
-    background-attachment: fixed;
-    background-position: center;
-    font-family: 'Orbitron', sans-serif;}
+body{ 
+  background-color: #dfdfdf;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23f3f700' fill-opacity='0.44'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  max-width: 100%;
+  overflow-x: hidden;
+  background-attachment: fixed;
+  background-position: center;
+  font-family: 'Typold Medium';
+}
 
-    .split {
-      height: 20vw;
-      width: 50%;
-      position: absolute;
-      z-index: 1;
-      top: 0;
-      overflow-x: hidden;
-      padding-top: 20px;
-      padding-bottom: 20px;
-      line-height: normal;
-    }
-    
-    /* Control the left side */
-    .left {
-      left: 0;
-      text-align: right;
-      animation-name: lefth1;
-      animation-duration: 2s;
-      animation-delay: 0.5s;
-    }
-    
-    @keyframes lefth1 {
-      0%   {left:100%; }
-      50%  {left:1%;}
-      100% {left:0px;}
-    }
-    
-    /* Control the right side */
-    .right {
-      right: 0;
-      text-align: left;
-      margin-top: 6vw;
-      animation-name: righth1;
-      animation-duration: 2s;
-      animation-delay: 0.5s;
-    }
-    
-    @keyframes righth1 {
-      0%   {right:100%;}
-      50%  {right:1%;}
-      100% {right:0px;}
-    }
-    
+
+
+.split {
+    height: 30vw;
+    width: 50%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    line-height: normal;
+  }
+
+  /* Control the left side */
+.left {
+    left: 0;
+    text-align: right;
+    animation-name: lefth1;
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+  }
+
+@keyframes lefth1 {
+    0%   {left:100%; }
+    50%  {left:1%;}
+    100% {left:0px;}
+  }
+
+  /* Control the right side */
+ .right {
+    right: 0;
+    text-align: left;
+    margin-top: 6vw;
+    animation-name: righth1;
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+  }
+
+@keyframes righth1 {
+    0%   {right:100%;}
+    50%  {right:1%;}
+    100% {right:0px;}
+  }
+
 #container{
-  margin-top: 20vw;
+  margin-top: 30vw;
   width: 80vw;
   margin-left: auto;
   margin-right: auto;
   display: grid;
-  grid-gap: 7em;
+  grid-gap: 5em;
   grid-template-columns:  repeat(auto-fit, minmax(350px,1fr));
+  grid-template-rows: minmax(0, 1fr);
   align-items: center;
   justify-items: center;
-}
-
-
+  }
 
 h1{
-    color:white;
-    background-color: black;
-    font-size: 6vw;
-    display: inline; 
-    box-shadow: 0 0 10px black;
+  color:white;
+  background-color: black;
+  font-size: 6vw;
+  display: inline; 
+  box-shadow: 0 0 10px black;
+  font-family: 'Orbitron', sans-serif;
+  text-shadow: 0.06rem 0 0.06rem #ea36af, -0.125rem 0 0.06rem #75fa69;
+  letter-spacing: 0.125em;
+  animation-duration: 0.01s;
+  animation-name: textflicker;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
+  
+
+@keyframes textflicker {
+  from {
+    text-shadow: 1px 0 0 #ea36af, -3px 0 0 #75fa69;
+  }
+  to {
+    text-shadow: 2px 0.5px 2px #ea36af, -2px -0.5px 2px #75fa69;
+  }
+}
+
+h2{
+  font-family: 'Typold Extended Regular';
+  color: #f1f1f1;
+  text-align:left;
+  font-size: 30pt;
+  padding-left: 20px;
+  }
+
+@font-face {
+  font-family: 'Typold Extended Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Typold Extended Regular'), url('The Northern Block Ltd - Typold Extended Regular.woff') format('woff');
+  }
+
 img {
-    max-width: 100%;
-    max-height: 100%;
-    }
+  max-width: 100%;
+  max-height: 100%;
+  }
+
+.flip-card  img {
+  position: absolute;
+  bottom: 0;
+  left:0;
+} /* fixes images producing grid blowout*/
 
 .flip-card {
-    background-color: transparent;
-    width: 100%;
-    height: 100%;
-    max-width: 450px;
-    min-width: 350px;
-    min-height:450px;
-    border: 1px solid #f1f1f1;
-    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  max-width: 450px;
+  min-width: 350px;
+  min-height:500px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; 
+  /* Remove this if you don't want the 3D effect */
   }
-  
+
   /* This container is needed to position the front and back side */
-  .flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
   }
-  
+
   /* Do an horizontal flip when you move the mouse over the flip box container */
-  .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
   }
-  
+
   /* Position the front and back side */
-  .flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden; /* Safari */
-    backface-visibility: hidden;
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
   }
-  
+
   /* Style the front side (fallback if image is missing) */
-  .flip-card-front {
-    background-color: black;
-    color:#dfdfdf;
+.flip-card-front {
+  background: repeating-linear-gradient(
+  45deg,
+  black,
+  black 20px,
+  #222222 20px,
+  #222222  40px
+);
+color:#dfdfdf;
   }
   
-  /* Style the back side */
-  .flip-card-back {
-    background-color: dodgerblue;
-    color: white;
-    transform: rotateY(180deg);
-  }
+/* Style the back side */
+.flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
 
 
   
