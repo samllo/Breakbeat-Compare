@@ -5,7 +5,6 @@ body{
   overflow-x: hidden;
   background-attachment: fixed;
   background-position: center;
-  font-family: 'Typold Medium';
 }
 
 
@@ -19,7 +18,6 @@ body{
     overflow-x: hidden;
     padding-top: 50px;
     padding-bottom: 20px;
-    line-height: normal;
   }
 
   /* Control the left side */
@@ -72,15 +70,31 @@ h1{
   font-size: 6vw;
   display: inline; 
   box-shadow: 0 0 10px black;
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Univers Next Pro Light Ext';
   text-shadow: 0.06rem 0 0.06rem #ea36af, -0.125rem 0 0.06rem #75fa69;
   letter-spacing: 0.125em;
   animation-duration: 0.01s;
   animation-name: textflicker;
   animation-iteration-count: infinite;
   animation-direction: alternate;
+  padding-top: 1.2vw;
+  padding-left: 0.6vw;
+  padding-right: 0.6vw;
 }
-  
+
+@font-face {
+  font-family: 'Univers Next Pro Light Ext';
+  src: url('UniversNextPro-BoldExt.eot');
+  src: url('UniversNextPro-BoldExt.eot?#iefix') format('embedded-opentype'),
+      url('UniversNextPro-BoldExt.woff2') format('woff2'),
+      url('UniversNextPro-BoldExt.woff') format('woff'),
+      url('UniversNextPro-BoldExt.ttf') format('truetype'),
+      url('UniversNextPro-BoldExt.svg#UniversNextPro-BoldExt') format('svg');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 
 @keyframes textflicker {
   from {
@@ -92,18 +106,25 @@ h1{
 }
 
 h2{
-  font-family: 'Typold Extended Regular';
+  font-family: 'Neue Haas Unica';
   color: #f1f1f1;
   text-align:left;
   font-size: 30pt;
-  padding-left: 20px;
+  margin-left: 20px;
+  background-color: black;
+  width: fit-content;
   }
 
+
+
 @font-face {
-  font-family: 'Typold Extended Regular';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Typold Extended Regular'), url('The Northern Block Ltd - Typold Extended Regular.woff') format('woff');
+    font-family: 'Neue Haas Unica';
+    src: local('Neue Haas Unica Bold'), local('Neue-Haas-Unica-Bold'),
+        url('NeueHaasUnica-Bold.woff2') format('woff2'),
+        url('NeueHaasUnica-Bold.woff') format('woff'),
+        url('NeueHaasUnica-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
   }
 
 img {
